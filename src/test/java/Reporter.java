@@ -5,14 +5,12 @@ import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-
 import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.io.File;
@@ -115,7 +113,7 @@ Thread.sleep(1500);
                 test.log(Status.FAIL,"Cant locate site address"+ e.getMessage());
             }finally {
                 if(flag){
-                    test.log(Status.PASS,"Registration Data Success");
+                    test.log(Status.PASS,"Filling Registration Data Success");
                 }
             }
         }
@@ -205,7 +203,7 @@ Thread.sleep(1500);
                 test.log(Status.FAIL,"Cant locate found me a gift button  "+e.getMessage());
             }finally {
                 if(flag){
-                    test.log(Status.PASS,"Success");
+                    test.log(Status.PASS,"Locate find me a gift button & press it");
                 }
             }
         }
@@ -258,7 +256,7 @@ Thread.sleep(1500);
                 test.log(Status.FAIL,"cant locate element  "+e.getMessage());
             }finally {
                 if(flag){
-                    test.log(Status.PASS,"Success");
+                    test.log(Status.PASS,"Success pressing Picking a gif Button ");
                 }
             }
         }
@@ -333,7 +331,7 @@ Thread.sleep(1500);
                 test.log(Status.FAIL,"cant locate element  "+e.getMessage());
             }finally {
                 if(flag){
-                    test.log(Status.PASS,"Success Filling who send the gift text box");
+                    test.log(Status.PASS,"Success picking a event from event list");
                 }
             }
 
@@ -352,7 +350,7 @@ Thread.sleep(1500);
                 test.log(Status.FAIL,"cant locate element  "+e.getMessage());
             }finally {
                 if(flag){
-                    test.log(Status.PASS,"Success Filling who send the gift text box");
+                    test.log(Status.PASS,"Success adding own blessing ");
                 }
             }
 
@@ -390,7 +388,7 @@ Thread.sleep(1500);
                 test.log(Status.FAIL,"Cant locate Registration Button"+ e.getMessage());
             }finally {
                 if(flag){
-                    test.log(Status.PASS,"yesssssssssss");
+                    test.log(Status.PASS,"Succsess pressing right after payment  radio button");
                 }
             }
 
@@ -409,10 +407,10 @@ Thread.sleep(1500);
                 flag=true;
             }catch (Exception e){
                 e.printStackTrace();
-                test.log(Status.FAIL,"what happend"+ e.getMessage());
+                test.log(Status.FAIL,"what happened"+ e.getMessage());
             }finally {
                 if(flag){
-                    test.log(Status.PASS,"Found Registration Button");
+                    test.log(Status.PASS,"Success sending gif via mail");
                 }
             }
         }

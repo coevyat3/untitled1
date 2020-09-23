@@ -8,10 +8,14 @@ public class BasePage {
 
 
 
+
     public void clickElement(By locator) {
 
         getWebElement(locator).click();
     }
+
+
+
     public void sendKeysToElement(By locator, String text) {
         getWebElement(locator).sendKeys(text);
     }

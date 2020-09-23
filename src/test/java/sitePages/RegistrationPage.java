@@ -11,7 +11,7 @@ public class RegistrationPage extends BasePage {
 
 
     public void gotoLoginPage() {
-        clickElement(By.xpath("//span[.='הרשמה']"));;
+        clickElement(By.xpath("//span[.='הרשמה']"));
     }
 
     public void gotoRegisterPage() {

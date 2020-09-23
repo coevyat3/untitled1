@@ -2,8 +2,8 @@ package User;
 
 public class Info {
     private static  String userName="evyatar cohen";
-    private static String email="test1a13xa1@gmail.com";
-    private static String  password="A1b1c1d1e4";
+    private static String email="tester1@wmail.com";
+    private static String  password="A1b1c1d1e1";
     private static  String confirmPassword=password;
 
     public static String getUserName() {
