@@ -1,13 +1,10 @@
 package sitePages;
 
-import Drivers.DriverSingelton;
+import Drivers.DriverSingleton;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 public class BasePage {
-   private DriverSingelton driverSingelton;
-
-
-
+    private DriverSingleton driverSingleton;
 
     public void clickElement(By locator) {
 
@@ -21,6 +18,6 @@ public class BasePage {
     }
     private WebElement getWebElement(By locator) {
         return
-                driverSingelton.getDriverInstance().findElement(locator);
+                driverSingleton.getDriverInstance().findElement(locator);
     }
 }

@@ -2,6 +2,8 @@ package sitePages;
 
 import User.Info;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 
 public class InfoPage extends  BasePage {
 
@@ -9,14 +11,17 @@ public class InfoPage extends  BasePage {
         clickElement(By.xpath("//*[text()[contains(.,'למישהו אחר')]]"));
     }
     public void receivingBoxName(){
-        String str="אח שלי גיבור ";
+        String str="אח שלי גיבור";
         String str1="//input[@data-parsley-required-message='מי הזוכה המאושר? יש להשלים את שם המקבל/ת']";
         sendKeysToElement(By.xpath(str1),str);
+        Assert.assertEquals(str,"אח שלי גיבור");
     }
     public void SenderBoxName(){
 String str="//input[@data-parsley-required-message='למי יגידו תודה? שכחת למלא את השם שלך']";
 String str2= Info.getUserName();
 sendKeysToElement(By.xpath(str),str2);
+Assert.assertEquals("evyatar cohen",Info.getUserName());
+
     }
     public void EventPick(){
         clickElement(By.xpath("//*[text()[contains(.,'לאיזה אירוע')]]"));
@@ -38,7 +43,7 @@ sendKeysToElement(By.xpath(str),str2);
         Thread.sleep(1500);
     }
     public void sendByTime(){
-       clickElement(By.className("send-now"));
+       clickElement(By.xpath("//*[text()[contains(.,'מיד אחרי התשלום')]]"));
     }
     public void sendBlessing(){
         sendKeysToElement(By.tagName("textarea"),"מזל טוב אוהב דקל");

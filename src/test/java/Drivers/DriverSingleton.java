@@ -6,7 +6,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.io.File;
 
-public class DriverSingelton {
+public class DriverSingleton {
     private static WebDriver driver;
 
     public static WebDriver getDriverInstance(){
